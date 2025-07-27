@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800 dark:bg-dark-bg dark:text-gray-200 transition-colors duration-300;
+  }
+}
+
+/* Animation Delays */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Modal Styles */
+@layer components {
+    .modal-enter {
+        @apply opacity-0;
+    }
+    .modal-enter-active {
+        @apply opacity-100 transition-opacity duration-300;
+    }
+    .modal-exit {
+        @apply opacity-100;
+    }
+    .modal-exit-active {
+        @apply opacity-0 transition-opacity duration-300;
+    }
+    .modal-content-enter {
+        @apply opacity-0 translate-y-4 scale-95;
+    }
+    .modal-content-enter-active {
+        @apply opacity-100 translate-y-0 scale-100 transition-all duration-300;
+    }
+    .modal-content-exit {
+        @apply opacity-100 translate-y-0 scale-100;
+    }
+    .modal-content-exit-active {
+        @apply opacity-0 translate-y-4 scale-95 transition-all duration-300;
+    }
+}
